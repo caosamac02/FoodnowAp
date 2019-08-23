@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/ivDish1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/dish" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvAppName"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/app_name"
+        android:layout_below="@id/ivDish1"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/xxxLargerFontSize"
+
+
+        />
+
+    <TextView
+        android:id="@+id/tvAppSlogan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/tvAppName"
+        android:layout_below="@+id/tvAppName"
+        android:text="@string/text_instant_food_delivery"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/xxxMediumFontSize"
+        />
+    <EditText
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAppSlogan"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/icon_email"
+        android:drawablePadding="@dimen/mediumSpace"
+        android:inputType="textEmailAddress"
+        android:hint="@string/text_email"
+        android:textColorHint="@color/colorTextHint"
+        />
+    <View
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+        android:layout_below="@id/txtEmail"
+        android:layout_alignStart="@id/txtEmail"
+        android:layout_alignEnd="@id/txtEmail"
+        android:layout_marginLeft="@dimen/xLargeSpace"
+        android:background="@color/colorPrimaryDark"
+
+    />
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:drawableLeft="@drawable/icon_lock"
+        android:layout_toLeftOf="@id/btnForgot"
+        android:background="@android:color/transparent"
+        android:drawablePadding="@dimen/mediumSpace"
+        android:hint="@string/txt_Pass"
+        android:inputType="textPassword"
+        android:textSize="@dimen/mediumFontSize"
+
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/txtPass"
+        android:layout_alignStart="@id/txtPass"
+        android:layout_alignEnd="@id/txtPass"
+        android:layout_marginLeft="@dimen/xLargeSpace"
+        android:background="@color/colorPrimaryDark"
+        />
+
+
+    <Button
+        android:id="@+id/btnForgot"
+        android:layout_width="74dp"
+        android:layout_height="24dp"
+        android:layout_below="@id/txtEmail"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="@dimen/smallSpace"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginRight="27dp"
+        android:background="@android:color/transparent"
+        android:text="Forgot"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/mediumFontSize"
+        android:textStyle="normal" />
+
+<LinearLayout
+    android:id="@+id/layoutbutton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/txtPass"
+    android:layout_alignLeft="@id/txtEmail"
+    android:layout_alignRight="@id/btnForgot"
+    android:orientation="horizontal">
+
+    <Button
+        android:id="@+id/btnSignIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+
+        android:foregroundTint="#2196F3"
+        android:text="Sign In"
+
+        android:textAllCaps="false"
+        android:textStyle="normal" />
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:backgroundTint="#8BC34A"
+        android:text="Sign Up"
+        android:textAllCaps="false"
+
+        android:textStyle="normal" />
+
+</LinearLayout>
+
+    <TextView
+        android:id="@+id/btnSignInFacebook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutbutton"
+        android:layout_alignLeft="@id/layoutbutton"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/mediumSpace"
+        android:layout_marginEnd="242dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/icon_facebook"
+        android:drawablePadding="@dimen/mediumSpace"
+        android:padding="@dimen/smallSpace"
+
+        android:text="@string/text_sign_in_facebook"
+        android:textAllCaps="false"
+        android:textSize="@dimen/mediumFontSize"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/btnSignInGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnSignInFacebook"
+        android:layout_alignLeft="@id/layoutbutton"
+        android:layout_alignRight="@id/btnSignInFacebook"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="240dp"
+        android:layout_marginRight="-1dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/icon_google"
+        android:drawablePadding="@dimen/mediumSpace"
+        android:padding="@dimen/smallSpace"
+        android:text="@string/text_sign_in_Google"
+        android:textAllCaps="false" />
+
+    <ImageView
+        android:id="@+id/imgEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dish_2"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

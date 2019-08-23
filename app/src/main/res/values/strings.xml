@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">FoodnowApp</string>
+    <string name="text_instant_food_delivery"> Instant food delivery</string>
+    <string name="text_email">email</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_Pass">Password</string>
+    <string name="text_sign_in_facebook">sign in Facebook</string>
+    <string name="text_sign_in_Google">Sign In Google</string>
+</resources>
